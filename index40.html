@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-commerce Web Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+     .main-container {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+ header {
+      background-color:yellow;
+      color: yellow;
+      padding: 1rem;
+      text-align: center;
+    }
+     nav {
+      background-color: #444;
+      padding: 0.5rem;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
+    nav a:hover {
+      color: #ff7f50; 
+    }
+
+    
+    .product-display {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 4rem;
+    }
+
+    .product-card {
+      border: 1px solid #ddd;
+      padding: 1rem;
+      margin: 1rem;
+      max-width: 200px;
+      text-align: center;
+    }
+
+    
+    .sidebar {
+      background-color: #eee;
+      padding: 2rem;
+      max-width: max-content;
+
+    }
+@media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .product-display {
+        justify-content: center;
+      }
+
+      .sidebar {
+        order: -1;
+      }
+    }
+    .img{
+        width: 250px;
+        height: 250px;
+        overflow: hidden;
+    }
+   .img img{
+    object fit: cover;
+    width: 100px
+    transition: transform .5s ease-in-out;
+   }
+   .img:hover img{
+    transform: scale(1.5) rotate(25deg);
+   }
+  </style>
+</head>
+<body>
+
+  
+  <div class="main-container">
+<header>
+      
+      <img src= "https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/fkheaderlogo_exploreplus-44005d.svg" alt=" image" align="center">
+      
+    </header>
+
+    <nav >
+      <a href="https://www.flipkart.com/grocery-supermart-store?marketplace=GROCERY&fm=neo%2Fmerchandising&iid=M_6706642f-8d4e-4daf-af61-1fc20607985b_1_372UD5BXDFYS_MC.CBUR1Q46W5F1&otracker=hp_rich_navigation_1_1.navigationCard.RICH_NAVIGATION_Grocery_CBUR1Q46W5F1&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_1_L0_view-all&cid=CBUR1Q46W5F1">Grocery</a>
+      <a href="https://www.flipkart.com/mobile-phones-store?fm=neo%2Fmerchandising&iid=M_ac432853-bb4c-4d9a-abd6-991b500fa83a_1_372UD5BXDFYS_MC.ZRQ4DKH28K8J&otracker=hp_rich_navigation_2_1.navigationCard.RICH_NAVIGATION_Mobiles_ZRQ4DKH28K8J&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_2_L0_view-all&cid=ZRQ4DKH28K8J">Mobiles</a>
+      <a href="https://www.flipkart.com/fashion-ss23-trendy-store?fm=neo%2Fmerchandising&iid=M_cf0f6502-b2a4-4732-9307-d7bdf72a4996_1_372UD5BXDFYS_MC.GXQPTNACQ6S3&otracker=hp_rich_navigation_10_1.navigationCard.RICH_NAVIGATION_Fashion~Essentials_GXQPTNACQ6S3&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_10_L1_view-all&cid=GXQPTNACQ6S3">Fasions</a>
+      <a href="https://www.flipkart.com/elec-b2b-store?fm=neo%2Fmerchandising&iid=M_65c9ad3f-040d-4ee7-ac70-ee16d74c6956_1_372UD5BXDFYS_MC.1B9DW42USMK1&otracker=hp_rich_navigation_2_1.navigationCard.RICH_NAVIGATION_Electronics~Electronics%2BGST%2BStore_1B9DW42USMK1&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_2_L1_view-all&cid=1B9DW42USMK1">Electronics</a>
+      <a href="https://www.flipkart.com/travel/flights?param=DTNavIcon&fm=neo%2Fmerchandising&iid=M_51419334-9088-4a69-8899-6c05007e85a7_1_372UD5BXDFYS_MC.V4ZPKTOAO321&otracker=hp_rich_navigation_7_1.navigationCard.RICH_NAVIGATION_Travel_V4ZPKTOAO321&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_7_L0_view-all&cid=V4ZPKTOAO321">Travel</a>
+      <a href="https://www.flipkart.com/two-wheelers-store?fm=neo%2Fmerchandising&iid=M_64af9cb2-7c33-40b0-aa48-175e20d0868b_1_372UD5BXDFYS_MC.SCJPZ04TFJJM&otracker=hp_rich_navigation_1_1.navigationCard.RICH_NAVIGATION_Two%2BWheelers~Petrol%2BVehicles_SCJPZ04TFJJM&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_1_L1_view-all&cid=SCJPZ04TFJJM">Two wheels</a>
+      
+
+    </nav>
+    <section style="width:2000px; height: 300px; background-color:rgb(234, 228, 228);float:left"> 
+        <div><marque>
+     <img src="https://rukminim1.flixcart.com/fk-p-flap/1600/270/image/850993b3fd3b450f.jpg?q=20" alt="Cinque Terre" width="2000px" height="300px"></marque></div>
+    </section>
+            
+
+    <section>
+
+     <div class="product-display">
+        
+        <div class="product-card">
+          <h3 class="image"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYkNfJXqGRMePB9nR7GLLPoyBL6C-49T8B2w&usqp=CAU" alt="image" height="100px"
+        width="100"></h3>
+          <p> Apple Earpods</p>
+          <button>500 Rs</button>
+          </div>
+     <div class="product-card">
+        <h3><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJeQYyqFJAbzPlseqXcoJlN-0OckEAhScs4Q&usqp=CAU" alt="image" height="100px"
+            width="100"></h3>
+        <p>SAMSUN MOBILE 128GB</p>
+        <button>1500 Rs</button>
+    </div>
+    <div class="product-card">
+        <h3><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2euGl4kLB798Q8kLVGT49b1d7TfvDx-Wtqw&usqp=CAU" alt="image" height="100px"
+            width="100"></h3>
+        <p>Well playing baby Toys</p>
+        <button>300 Rs</button>
+    </div>
+    <div class="product-card">
+        <h3><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNW-fXCddWn_5DDOLvG5RPL-lXVULKTw1Drg&usqp=CAU" alt="image" height="100px"
+            width="100"></h3>
+        <p>White cotton top</p>
+        <button>380Rs</button>
+    </div>
+    <div class="product-card">
+        <h3><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQK_Wn-utPhXHe9Mp7asaQjMnmIcRvuXWF5Bg&usqp=CAU" alt="image" height="100px"
+            width="100"></h3>
+        <p>VIVO PHONE 64GB</p>
+        <button>18000 Rs</button>
+    </div>
+    <div class="product-card">
+        <h3><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmsfLhuM8T7aNTQP1oC_ERsSE8e0qln6UkUA&usqp=CAU" alt="image" height="100px"
+            width="100"></h3>
+        <p> LG LED TV</p>
+        <button>55000 Rs</button>
+    </div>
+    <div class="product-card">
+        <h3><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrCtP-ckXAQ3b00sf3nav-1W3O7-6x4msbsQ&usqp=CAU" alt="image" height="100px"
+            width="100"></h3>
+        <p>SAMSUN LCD TV</p>
+        <button>75000 Rs</button>
+    </div>
+    <div class="product-card">
+        <h3><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkH4UaxscrISKb3RGwdR1HQbPwkhXSCYzQNQ&usqp=CAU" alt="image" height="100px"
+            width="100"></h3>
+        <p>HITACHI AC</p>
+        <button>30000 Rs</button>
+    </div>
+    <div class="product-card">
+        <h3><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVsyyPAA-g2rwDaW5fYqIMAA5gJXg_JgF-yw&usqp=CAU" alt="image" height="100px"
+            width="100"></h3>
+        <p>midha&oil combo</p>
+        <button>250 Rs</button>
+    </div>
+    <div class="product-card">
+        <h3><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeTifTFrz_gkCRboOuyFBskC33a3-dGuZBnTgNuwIQpY7cwD6FG5QxgvKQ40ux7JJMEXY&usqp=CAU" alt="image" height="100px"
+            width="100"></h3>
+        <p>handbag with mini pocket bag</p>
+        <button>550 Rs</button>
+    </div>
+    <div class="product-card">
+        <h3><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT373arQeu1_GzdMqiGx4aMKqVPKe801rAJ-g&usqp=CAU" alt="image" height="100px"
+            width="100"></h3>
+        <p>PINK BAG</p>
+        <button>700Rs</button>
+    </div>
+    <div class="product-card">
+        <h3><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7E80bwx3sU9ED_0HQUtEAlf9D_AaYnihF9vvPltDR0Wthes-i1NZId-4OsL-DjRdO7Ic&usqp=CAU" alt="image" height="100px"
+            width="100"></h3>
+        <p>Hand length table</p>
+        <button>750Rs</button>
+    </div>
+    <div class="product-card">
+        <h3><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4pUwjpFCgT-OLW-xeRyr8NHSIJYGzBBLLpw&usqp=CAU" alt="image" height="100px"
+            width="100"></h3>
+        <p>lavander colour Bag</p>
+        <button>400Rs</button>
+    </div>
+    <div class="product-card">
+        <h3><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbDqtmK86QcgXR4SK-890wGjS_7jN2fn4laQ&usqp=CAU" alt="image" height="100px"
+            width="100"></h3>
+        <p>BABY MUSIC PLAY TOYS</p>
+        <button>350 Rs</button>
+    </div>
+    
+     </div>
+    </section>
+
+
+    
+    <aside class="sidebar">
+      <h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaFQamhfN8N1jQ15PI_wlet9nBsYj2LFkdcQ&usqp=CAU" alt="image" height="500px"
+        width="600px"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShzegRNeQBOWJ2_yqM5xm95aJcgxfWAMFbWQ&usqp=CAU" alt="image" height="500px"
+        width="1000px"></h2>
+      
+    </aside>
+
+    
+    <footer>
+      <p align="center"><B>&copy; 2023 flipkart</B></p>
+      <P style="color:blue"><marquee>BEST BIG BILLION OFFER ARE AVAILABLE IN FLIPKARD</marquee></P>
+    </footer>
+
+  </div>
+
+</body>
+</html>
